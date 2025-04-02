@@ -1,0 +1,22 @@
+.result {
+    background-color: var(--slate-900);
+    padding: 3rem;
+    text-align: center;
+}
+
+.result img {
+    width: 14rem;
+}
+
+.result h2 {
+    color: var(--white);
+    font-size: 2rem;
+    font-weight: var(--font-weitgh-bold);
+    margin-top: 1.8rem;
+}
+
+.result p {
+    color: var(--white);
+    font-size: 1.4rem;
+    margin-top: 2rem;
+}

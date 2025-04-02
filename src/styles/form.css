@@ -1,0 +1,157 @@
+.container__form {
+  margin: 0 auto;
+  width: 90%;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form h1 {
+  color: var(--slate-900);
+  font-size: 2.5rem;
+  font-weight: var(--font-weitgh-bold);
+  margin: 3.5rem 0 1.5rem;
+}
+
+.form__button-clearAll {
+  color: var(--slate-700);
+  cursor: pointer;
+  background-color: var(--white);
+  border: none;
+  font-size: 1.6rem;
+  font-weight: var(--font-weitgh-medium);
+  margin-bottom: 3rem;
+  text-decoration: underline;
+  width: 6.2rem;
+  padding: 0;
+}
+
+.form__label {
+  color: var(--slate-700);
+  font-weight: var(--font-weitgh-bold);
+  margin-bottom: 1.3rem;
+}
+
+.form__div {
+  display: flex;
+
+  border: 2px solid var(--slate-700);
+  border-radius: 5px;
+  flex-direction: row;
+  height: 5rem;
+  margin-bottom: 2.5rem;
+}
+
+.form__div span {
+  display: flex;
+
+  align-items: center;
+  background-color: var(--slate-100);
+  color: var(--slate-700);
+  font-size: 2rem;
+  font-weight: var(--font-weitgh-bold);
+  justify-content: center;
+}
+
+.form__input {
+  border: none;
+  color: var(--slate-900);
+  font-size: 2.3rem;
+  font-weight: var(--font-weitgh-bold);
+  outline: none;
+  padding-left: 2rem;
+}
+
+/* Mortgage Amount */
+.form__amount-input {
+  width: 87%;
+}
+
+.form__div-amount span {
+  width: 13%;
+}
+
+/* Mortgage Term */
+.form__term-input {
+  width: 75%;
+}
+
+.form__div-term span {
+  width: 25%;
+}
+
+/* Interest Rate */
+.form__rate-input {
+  width: 82%;
+}
+
+.form__div-rate span {
+  width: 18%;
+}
+
+/* Mortgage Type */
+.form__mortgageType {
+  display: flex;
+
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form__mortgageType-input {
+  display: flex;
+
+  align-items: center;
+  border: 2px solid var(--slate-700);
+  border-radius: 5px;
+  height: 5rem;
+  gap: 1.6rem;
+  padding-left: 1.2rem;
+}
+
+.form__mortgageType-input input[type="radio"] {
+  appearance: none;
+  border: 2px solid var(--slate-900);
+  border-radius: 50%;
+  margin: 0 0 0 .6rem;
+  height: 2rem;
+  width: 2rem;
+}
+
+.form__mortgageType-input input[type="radio"]:checked {
+  background-image: radial-gradient(#d7da2f 50%, #fff 40%);
+  border: 2px solid var(--lime);
+}
+
+.form__mortgageType-input:has(:checked) {
+  background-color: #fafae0;
+  border: 2px solid #d7da2f;
+}
+ 
+.form__mortgageType label {
+  color: var(--slate-900);
+  font-size: 2rem;
+  font-weight: var(--font-weitgh-bold);
+}
+
+/* Calculate Repayments */
+.form__calculateRepayment {
+  display: flex;
+
+  align-items: center;
+  background-color: var(--lime);
+  border-radius: 50px;
+  gap: 0.7rem;
+  justify-content: center;
+  height: 5rem;
+  margin: 2rem 0 3rem;
+}
+
+.form__button-calculateRepayment {
+  background-color: var(--lime);
+  border: none;
+  color: var(--slate-900);
+  font-size: 2rem;
+  font-weight: var(--font-weitgh-bold);
+}
