@@ -1,0 +1,85 @@
+.repayments {
+    display: none;
+
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    background-color: var(--slate-900);
+    padding: 3rem 2rem 2rem;
+}
+
+.repayments h2 {
+    color: var(--white);
+    font-size: 2rem;
+    font-weight: var(--font-weitgh-bold);
+}
+
+.repayments p {
+    color: var(--white);
+    font-size: 1.4rem;
+    line-height: 2.1rem;
+    margin-top: 2rem;
+}
+
+.repayments__calculate {
+    display: flex;
+
+    background-color: rgba(0, 0, 0, 0.5);
+    border-top: 3px solid var(--lime);
+    border-radius: 5px;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 2rem;
+    padding: 2.5rem 2rem;
+    width: 90%;
+}
+
+.repayments__calculate-monthlyRepayments {
+    display: flex;
+    flex-direction: column;
+}
+
+.repayments__calculate-monthlyRepayments h3 {
+    display: inline-block;
+    font-size: 1.4rem;
+    color: var(--white);
+}
+
+.repayments__calculate-monthlyRepayments span {
+    display: inline-block;
+    color: var(--lime);
+    font-size: 3rem;
+    margin-top: 2rem;
+}
+
+.repayments__calculate-totalOverTheTerm {
+    border-top: 1px solid var(--white);
+}
+
+.repayments__calculate-totalOverTheTerm h3 {
+    color: var(--white);
+    font-size: 1.4rem;
+    margin-top: 2rem;
+}
+
+.repayments__calculate-totalOverTheTerm span {
+    display: inline-block;
+    color: var(--white);
+    font-size: 2.2rem;
+    font-weight: var(--font-weitgh-medium);
+    margin-top: 2rem;
+}
+
+@media screen and (min-width: 780px) {
+    .repayments {
+        display: none;
+    
+        border-radius: 0  20px  20px 50px;
+        width: 50%;
+    }
+
+    .repayments__calculate {
+        width: 90%;
+    }
+}

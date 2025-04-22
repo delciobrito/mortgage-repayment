@@ -24,81 +24,104 @@
     <link rel="stylesheet" href="src/styles/global.css" />
     <link rel="stylesheet" href="src/styles/form.css" />
     <link rel="stylesheet" href="src/styles/result.css" />
+    <link rel="stylesheet" href="src/styles/repayments.css" />
     <link rel="stylesheet" href="src/styles/footer.css" />
 
     <!-- JavaScript -->
-     <script defer src="src/scripts/inputs.js"></script>
+    <script defer src="src/scripts/main.js"></script>
   </head>
 
   <body>
     <main>
       <div class="container__form">
-        <form class="form">
-          <h1>Mortgage Calculator</h1>
-          <button class="form__button-clearAll">Clear All</button>
+        <form class="form" novalidate>
+          <div class="form__header">
+            <h1 class="form__header-title">Mortgage Calculator</h1>
+            <button type="reset" class="form__header-buttonClearAll">Clear All</button>
+          </div>
 
           <!-- Mortgage Amount -->
-           
-          <label class="form__label" for="amount">Mortgage Amount</label>
-          <div class="form__div form__div-amount">
-            <span>$</span>
-            <input
-              class="form__input form__amount-input"
-              id="amount"
-              type="number"
-              data-mask="00/00/0000"
-            />
+          <div>
+            <label class="form__label" for="amount">Mortgage Amount</label>
+            <div class="form__div form__div-amount">
+              <span class="symbol">£</span>
+              <input
+                class="form__input form__amount-input"
+                id="amount"
+                type="number"
+                required
+              />
+            </div>
+            <span class="error" aria-live="polite"></span>
           </div>
 
-          <!-- Mortgage Term -->
-          <label class="form__label" for="term">Mortgage Term</label>
-          <div class="form__div form__div-term">
-            <input
-              class="form__input form__term-input"
-              id="term"
-              type="number"
-            />
-            <span>years</span>
-          </div>
+          <div class="form__termErate">
 
-          <!-- Mortgage Interest Rate -->
-          <label class="form__label" for="rate">Interest Rate</label>
-          <div class="form__div form__div-rate">
-            <input
-              class="form__input form__rate-input"
-              id="rate"
-              type="number"
-            />
-            <span>%</span>
+            <!-- Mortgage Term -->
+            <div>
+              <label class="form__label" for="term">Mortgage Term</label>
+              <div class="form__div form__div-term">
+                <input
+                  class="form__input form__term-input"
+                  id="term"
+                  type="number"
+                  required
+                />
+                <span class="symbol">years</span>
+              </div>
+              <span class="error" aria-live="polite"></span>
+            </div>
+  
+            <!-- Mortgage Interest Rate -->
+            <div>
+              <label class="form__label" for="rate">Interest Rate</label>
+              <div class="form__div form__div-rate">
+                <input
+                  class="form__input form__rate-input"
+                  id="rate"
+                  type="number"
+                  step=".01"
+                  required
+                />
+                <span class="symbol">%</span>
+              </div>
+              <span class="error" aria-live="polite"></span>
+            </div>
           </div>
 
           <!-- Mortgage Type -->
-          <label class="form__label" for="">Mortgage Type</label>
-          <div class="form__mortgageType">
-            <div class="form__mortgageType-input">
-              <input
-                type="radio"
-                name="mortgageType"
-                id="repayment"
-              />
-              <label for="repayment">Repayment</label>
+          <div>
+            <label class="form__label" for="">Mortgage Type</label>
+            <div class="form__mortgageType">
+              <div class="form__mortgageType-input">
+                <input
+                  type="radio"
+                  name="mortgageType"
+                  id="repayment"
+                  required
+                />
+                <label for="repayment">Repayment</label>
+              </div>
+              <div class="form__mortgageType-input">
+                <input
+                  type="radio"
+                  name="mortgageType"
+                  id="interestOnly"
+                  required
+                />
+                <label for="interestOnly">Interest Only</label>
+              </div>
             </div>
-            <div class="form__mortgageType-input">
-              <input
-                type="radio"
-                name="mortgageType"
-                id="interestOnly"
-              />
-              <label for="interestOnly">Interest Only</label>
-            </div>
+            <span class="error"></span>
           </div>
 
-          <div class="form__calculateRepayment">
-            <img src="src/assets/images/icon-calculator.svg" alt="" />
-            <button class="form__button-calculateRepayment">
-              Calculate Repayments
-            </button>
-          </div>
+          <button class="form__button-calculateRepayment">
+            <img
+              src="src/assets/images/icon-calculator.svg"
+              alt="calculator image"
+            />
+            Calculate Repayments
+          </button>
         </form>
       </div>
 
@@ -115,15 +138,26 @@
       <!-- Empty results end -->
 
       <!-- Completed results start -->
+      <div class="repayments">
+        <h2>Your results</h2>
 
-      <!-- Your results
-    
-      Your results are shown below based on the information you provided. 
-      To adjust the results, edit the form and click “calculate repayments” again.
-    
-      Your monthly repayments
-    
-      Total you'll repay over the term -->
+        <p>
+          Your results are shown below based on the information you provided. To
+          adjust the results, edit the form and click “calculate repayments”
+          again.
+        </p>
+
+        <div class="repayments__calculate">
+          <div class="repayments__calculate-monthlyRepayments">
+            <h3>Your monthly repayments</h3>
+            <span>$1,797.74</span>
+          </div>
+          <div class="repayments__calculate-totalOverTheTerm">
+            <h3>Total you'll repay over the term</h3>
+            <span>$539,322.94</span>
+          </div>
+        </div>
+      </div>
 
       <!-- Completed results end -->
     </main>
